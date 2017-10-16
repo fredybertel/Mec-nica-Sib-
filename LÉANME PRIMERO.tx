@@ -1,0 +1,13 @@
+# Mec-nica-Sib-
+Prototipo Mecánica Volcán Sibú
+
+Se cambió el botón por piezo electro, ya que después de pruebas
+se mejoró la interacción
+
+El secuenciador envía datos osc al reproducir el "tum" (sonido de tambor), también recibe como prueba datos osc por un 
+puerto distinto
+
+del PD al openframework, se envía datos osc, en el OF (openframework) se utiliza un microcontrolador (arduino con firmata quemado),
+para comunicarse con otro arduino, este arduino es el sensor con el cual se sincroniza al "tum" de PD, cuando esto sucede,
+alumbra de alguna manera específica. Al concordar el golpe dado por el usuario y el "tum" del ritmo, este envía un dato al micro del OF
+almacenando una variable contando el número de golpes acertados, para luego enviar por OSC la orden para el cambio de estado.
